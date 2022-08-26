@@ -21,13 +21,13 @@ public class WorkerResource {
     private WorkerService workerService;
 
     @GetMapping
-    public ResponseEntity<List<Worker>> findAll(){
+    public ResponseEntity<List<Worker>> findAll() {
         List<Worker> list = workerService.findAll();
         return ResponseEntity.ok(list);
     }
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<Worker> findById(@PathVariable Long id){
+    public ResponseEntity<Worker> findById(@PathVariable Long id) {
         Optional<Worker> optionalWorker = workerService.findById(id);
         return optionalWorker.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.badRequest().build());
     }
