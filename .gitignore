@@ -4,6 +4,8 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+C:/Users/pedro/OneDrive/Documents/IdeaProjects/Udemy/ms-course/hr-config-server/src/main/resources/credencials.properties
+
 ### STS ###
 .apt_generated
 .classpath
