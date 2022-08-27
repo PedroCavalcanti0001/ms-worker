@@ -23,7 +23,7 @@ public class PaymentResource {
         return ResponseEntity.ok(service.getPayments(workerId, days));
     }
 
-    private ResponseEntity<Payment> getPaymentAlternative(Long workerId,Integer days) {
+    private ResponseEntity<Payment> getPaymentAlternative(Long workerId, Integer days) {
         Payment payment = new Payment("Brann", 400.0, days);
         return ResponseEntity.ok(payment);
     }

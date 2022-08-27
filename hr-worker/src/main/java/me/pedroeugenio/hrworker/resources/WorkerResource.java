@@ -36,7 +36,7 @@ public class WorkerResource {
 
     @GetMapping("/configs")
     public void configs() {
-        LOG.info("CONFIG = "+testConfig);
+        LOG.info("CONFIG = " + testConfig);
     }
 
     @GetMapping
@@ -48,7 +48,7 @@ public class WorkerResource {
     @GetMapping(value = "/{id}")
     public ResponseEntity<Worker> findById(@PathVariable Long id) {
 
-        LOG.info("PORT = "+env.getProperty("local.server.port"));
+        LOG.info("PORT = " + env.getProperty("local.server.port"));
 
         Optional<Worker> optionalWorker = workerService.findById(id);
         return optionalWorker.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.badRequest().build());
